@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddReviewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:progressTint="@color/checked_star"
+                android:secondaryProgressTint="@color/checked_star"
+                android:numStars="5"
+                android:stepSize="1"
+                android:layout_gravity="center"
+                android:rating="0" />
+
+            <EditText
+                android:id="@+id/txtName"
+                style="@style/editText_ragister"
+                android:layout_width="match_parent"
+                android:hint="Your Name*"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_marginTop="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <EditText
+                android:id="@+id/txtEmail"
+                style="@style/editText_ragister"
+                android:layout_width="match_parent"
+                android:hint="Email*"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/txtTitleReview"
+                style="@style/editText_ragister"
+                android:layout_width="match_parent"
+                android:hint="Review*"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/txtReviewDesc"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="top"
+                android:background="@drawable/background_with_shadow"
+                android:gravity="top"
+                android:hint="How was your overall experience?*"
+                android:inputType="textMultiLine"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="35dp"
+                android:paddingRight="35dp"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MyApp.ThemeButton"
+                android:text="Submit Review"
+                android:textAllCaps="false"
+                android:textColor="@color/White" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone"/>
+
+</RelativeLayout>

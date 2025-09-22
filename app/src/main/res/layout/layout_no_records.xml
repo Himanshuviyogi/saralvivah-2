@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lblNoRecordsFound"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/white"
+    android:gravity="center"
+    android:clickable="true"
+    android:text="No records  found"
+    android:textColor="@color/cardview_dark_background"
+    android:textSize="16sp"
+    android:textStyle="bold" />

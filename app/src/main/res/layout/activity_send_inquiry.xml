@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SendInquiryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtName"
+                style="@style/editText_ragister"
+                android:layout_width="match_parent"
+                android:hint="Your Name*"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="100"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_square_edittext">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryCodePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:tag="countryCodePicker"
+                        app:ccp_arrowColor="@color/black"
+                        app:ccp_defaultNameCode="IN"
+                        app:ccp_showArrow="true"
+                        app:ccp_showFlag="true"
+                        app:ccp_showFullName="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="true"
+                        app:ccp_textSize="15sp" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/txtMobile"
+                    style="@style/editText_ragister"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/layoutCountryCode"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"/>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txtEmail"
+                style="@style/editText_ragister"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:hint="Email*"
+                android:maxLength="100"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+
+            <EditText
+                android:id="@+id/txtDOB"
+                style="@style/editText_ragister"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Wedding Date*"
+                android:inputType="none"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+
+            <EditText
+                android:id="@+id/txtSelectNoGuest"
+                style="@style/editText_ragister"
+                android:layout_width="match_parent"
+                android:hint="No of Guest*"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_with_shadow"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinSelectNoGuest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="37dp"
+                    app:backgroundTint="@color/red" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_with_shadow"
+                android:gravity="top"
+                android:hint="Description*"
+                android:inputType="textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:maxLength="4000"
+                android:paddingTop="20dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Send Me Info Via" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".40"
+                    android:text="Email" />
+
+                <CheckBox
+                    android:id="@+id/cbCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".60"
+                    android:text="Need Call Back" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnSendInquiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MyApp.ThemeButton"
+                android:text="Send Inquiry"
+                android:textAllCaps="false"
+                android:textColor="@color/White" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+
+</RelativeLayout>

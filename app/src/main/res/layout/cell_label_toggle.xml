@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btnOption"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center|center_vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:maxLines="1"
+    android:text="Offers"/>

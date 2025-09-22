@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/mainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/register_dropdown_parent_layout"
+    android:visibility="visible">
+
+    <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+        android:id="@+id/spinner"
+        style="@style/register_dropdown" />
+</RelativeLayout>

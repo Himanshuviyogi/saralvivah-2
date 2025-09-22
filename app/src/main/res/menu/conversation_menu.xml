@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/delete"
+        android:visible="false"
+        app:showAsAction="always"
+        android:icon="@drawable/trash_fill_white"
+        android:title="Delete" />
+    <item android:id="@+id/mark_all"
+        android:visible="false"
+        app:showAsAction="always"
+        android:icon="@drawable/list_all_white"
+        android:title="Mark All" />
+</menu>

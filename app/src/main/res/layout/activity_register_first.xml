@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context="com.advance.sanatani_vivah.activities.RegisterFirstActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutBottomTop"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/bg_vector" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:rotation="180"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/bg_vector"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ragi_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <include layout="@layout/layout_register_step1"/>
+            <include layout="@layout/layout_register_step2"/>
+            <include layout="@layout/layout_register_step3"/>
+            <include layout="@layout/layout_register_step4"/>
+            <include layout="@layout/layout_register_step5"/>
+            <include layout="@layout/layout_register_step6"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/bottom_sheet_dialog_choose_image"/>
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

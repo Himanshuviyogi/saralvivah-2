@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="#fff"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Filter"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:src="@drawable/ic_close"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/register_dropdown_parent_layout"
+            android:visibility="gone">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spinCategory"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/register_dropdown_parent_layout"
+            android:layout_marginTop="15dp">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spinCountry"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spinState"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spinCity"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnFilterSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MyApp.ThemeButton"
+            android:text="Filter"
+            android:textAllCaps="false"
+            android:textColor="@color/White" />
+
+        <Button
+            android:id="@+id/btnFilterReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+         style="@style/Widget.MyApp.ThemeButton"
+            android:text="Reset"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layoutFilterProgressBar"
+        layout="@layout/layout_progressbar"
+        android:visibility="gone" />
+</RelativeLayout>
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_family"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_family_type"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input1"
+        style="@style/Widget.Shrine.TextInputLayout"
+        android:layout_marginTop="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_father_name"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Father Name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input2"
+        style="@style/Widget.Shrine.TextInputLayout"
+        android:layout_marginTop="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_father_ocu"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Father Occupation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input3"
+        style="@style/Widget.Shrine.TextInputLayout"
+        android:layout_marginTop="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_mother_name"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Mother Name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input4"
+        style="@style/Widget.Shrine.TextInputLayout"
+        android:layout_marginTop="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_mother_ocu"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Mother Occupation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_family_status"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_no_bro"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_no_mari_bro"
+            style="@style/register_dropdown" />
+
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_no_sis"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_no_mari_sis"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_multiline_edittext_layout">
+
+        <EditText
+            android:id="@+id/et_about_family"
+            style="@style/register_multiline_edittext_style"
+            android:hint="Write About Your Family" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_family"
+        style="@style/Widget.MyApp.ThemeButton"
+        android:layout_marginTop="10dp"
+        android:text="Update" />
+
+</LinearLayout>

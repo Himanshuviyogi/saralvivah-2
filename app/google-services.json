@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "440614171303",
+    "project_id": "saral-vivah",
+    "storage_bucket": "saral-vivah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440614171303:android:6a01f5c8eb20fc6a472182",
+        "android_client_info": {
+          "package_name": "com.advance.sanatani_vivah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440614171303-lo14eilfhrnjee8g2hejjc4an4tjsaso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQRedRthnrKCttevy-0oC-h4HBYlaECc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440614171303-lo14eilfhrnjee8g2hejjc4an4tjsaso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

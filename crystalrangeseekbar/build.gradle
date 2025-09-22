@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'  // Add this line for publishing the library
+
+ext {
+    // Where you will see your artifact in Bintray's web interface
+    // The "bintrayName" should match the name of the Bintray repro.
+    bintrayRepo = 'maven'
+    bintrayName = 'crystalrangeseekbar'
+
+    // Maven metadata
+    publishedGroupId = 'com.crystal'
+    libraryName = 'CrystalRangeSeekbar'
+    // Save yourself a head ache, and set this equal to the name of the Android Studio library
+    // module. The artifact name needs to match the name of the library.
+    artifact = 'crystalrangeseekbar'
+
+    libraryDescription = 'An extended version of android range seekbar.'
+
+    gitUrl = 'https://github.com/syedowaisali/crystal-range-seekbar.git'
+
+    libraryVersion = '1.1.4'
+
+    developerId = 'syedowaisali'
+    developerName = 'Syed Owais Ali'
+    developerEmail = 'dp.owaisali@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 34
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+   // implementation 'com.android.support:appcompat-v7:27.0.2'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+          //  from components.release  // This assumes the 'release' component for an Android library
+
+            // Define library's groupId, artifactId, and version
+            groupId = 'icubeaccess'  // Replace with your GitHub username
+            artifactId = 'AndroidVideoCache'  // Replace with your library's name
+            version = '1.0.1'  // Use the version you want to publish
+        }
+    }
+
+    // Optional: Define where to publish
+    repositories {
+        maven {
+            url = uri("https://jitpack.io")  // Specify JitPack as the repository
+        }
+        google()
+    }
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_basic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_looking"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_complx"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_height_from"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_height_to"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_age_from"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_age_to"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_body_type"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_eat"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_smok"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_drink"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_mtongue"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_multiline_edittext_layout">
+
+        <EditText
+            android:id="@+id/et_expcts"
+            style="@style/register_multiline_edittext_style"
+            android:hint="Write Expectations" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_basic"
+        style="@style/Widget.MyApp.ThemeButton"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_update" />
+
+
+</LinearLayout>

@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "com.advance.sanatani_vivah"
+        minSdkVersion 26
+        targetSdkVersion 34
+        versionCode 4
+        versionName "1.1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        //TODO Firebase Phone Auth step2 18/09/2021 Nasirali
+        debug {
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+        }
+    }
+
+    //add for apk name
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def project = "shadii_advance_"
+            def date = new Date();
+            def formattedDate = date.format('MMM_dd')
+            def newApkName = project + formattedDate + ".apk"
+            outputFileName = new File(newApkName)
+        }
+    }
+
+    //06/10/2017 add for lamda support
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    //TODO Firebase Phone Auth step3 18/09/2021 Nasirali
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+
+    implementation 'androidx.annotation:annotation:1.1.0'
+    //firebase notification
+    implementation platform('com.google.firebase:firebase-bom:26.3.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+//    implementation 'com.google.firebase:firebase-config'
+    //for delete & generate new fcm token
+    implementation 'com.google.firebase:firebase-installations:17.0.0'
+    //TODO Firebase Phone Auth step1 18/09/2021 Nasirali
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'androidx.browser:browser:1.3.0'
+
+    //Google map
+    implementation 'com.google.android.gms:play-services-maps:19.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //youtube player
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //country code picker
+    //implementation 'com.github.joielechong:countrycodepicker:2.4.1'
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //rounded imageview
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //custom snack bar
+//  implementation 'com.irozon.sneaker:sneaker:1.0.3'
+    //implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+
+    //custom buttons
+    //implementation 'com.hudomju:swipe-to-dismiss-undo:1.0'
+   // implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
+    //show case library
+//    implementation 'com.elconfidencial.bubbleshowcase:bubbleshowcase:1.3.1'
+    //crop
+    implementation 'com.github.yalantis:ucrop:2.2.6'
+
+    //Added by nasirali
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //implementation 'id.zelory:compressor:3.0.0'
+
+    //Compress Image Size
+   //  implementation 'id.zelory:compressor:2.1.0'
+    //custom progressbar
+
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    //Lottie animation
+    implementation 'com.airbnb.android:lottie:3.6.0'
+
+    //Country code picker
+    implementation 'com.hbb20:ccp:2.5.1'
+
+    //image chooser
+    implementation 'com.github.jkwiecien:EasyImage:3.0.4'
+
+    //Permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //slider
+    //implementation 'com.github.smarteist:autoimageslider:1.3.9'
+
+    implementation 'com.github.shallcheek:RatingBar:v1.0'
+
+    //fab with actions
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+    //card stack view
+    //implementation "com.yuyakaido.android:card-stack-view:2.3.4"
+
+    //card shadows
+  //  implementation 'com.loopeer.lib:shadow:0.0.4-beta3'
+
+    //Card Slider
+    implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
+
+    //alert
+    implementation 'com.github.tapadoo:alerter:7.2.4'
+
+    //youtube video player
+   // implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    //image slider
+  //  implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    implementation project(':library')
+    implementation project(':cardstackview')
+    implementation project(':crystalrangeseekbar')
+//    implementation project(':shadow')
+    //implementation project(':sneaker')
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //otp edittext
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+    //implementation 'com.github.StevenUltraman:Sneaker:v1.0'
+
+    implementation 'com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:+'
+    implementation 'com.github.ZEGOCLOUD:zego_uikit_signaling_plugin_android:+'
+}
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    mavenCentral()
+}

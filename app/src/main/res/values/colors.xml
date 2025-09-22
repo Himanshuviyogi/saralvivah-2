@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ec6e2e</color>
+    <color name="colorPrimaryDark">#ED3237</color>
+    <color name="colorAccent">#ED3237</color>
+    <color name="White">#ffffff</color>
+    <color name="red">@color/gradient_start_color</color>
+    <color name="green">#29d912</color>
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="gray_background">#757575</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="mark_background">#56c2063b</color>
+    <color name="unmark_background">#00ffffff</color>
+    <color name="blue_default">#3174FA</color>
+
+
+    <color name="divider_color">#20778286</color>
+    <color name="bottom_divider_color">@color/divider_color</color>
+
+    <color name="transparent_color">#00ffffff</color>
+    <color name="transparent_color_1">#40ffffff</color>
+
+    <color name="gradient_start_color">#fcb349</color>
+    <color name="gradient_center_color">#fcb349</color>
+    <color name="gradient_end_color">#fcb349</color>
+
+    <color name="blue_color">#169ee8</color>
+    <color name="blue_color1">#40169ee8</color>
+
+    <color name="send_chat_color">#F2F2F2</color>
+    <color name="received_chat_color">@color/colorAccent</color>
+
+    <!--gray-->
+    <color name="lighter_gray">#20778286</color>
+    <color name="light_gray">#dfdedb</color>
+    <color name="light_grey">#D5D5D5</color>
+    <color name="transparent_gray">#80808080</color>
+    <color name="grayStart">#adadad</color>
+    <color name="gray">#808080</color>
+    <color name="dark_grey">#5E5E5E</color>
+    <color name="dark_gray">#2e2e2e</color>
+    <color name="lbl_gray">#1e1e1e</color>
+    <color name="black">#000</color>
+
+    <!--Textview Related colors-->
+    <color name="details_bg_color">#051527</color>
+    <color name="title_text_color">#2e2e2e</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_white">#95ffffff</color>
+    <color name="transparent_white1">#30ffffff</color>
+    <color name="transparent_black">#99000000</color>
+    <color name="transparent_black50">#50000000</color>
+    <color name="light_blue">#42aae7</color>
+    <color name="register_divider_gray">#C0C0C0</color>
+    <color name="transparent_register_divider_gray">#50000000</color>
+
+    <color name="checked_star">#F9B704</color>
+
+    <color name="color_royal">#00fcdf</color>
+    <color name="color_luxury">#ED6917</color>
+    <color name="color_ultimate">#E601F3</color>
+    <color name="color_nri">#2bfc60</color>
+
+    <color name="bg_color_royal">#e8fffc</color>
+    <color name="bg_color_luxury">#fef6f1</color>
+    <color name="bg_color_ultimate">#fef4ff</color>
+    <color name="bg_color_nri">#ecfff1</color>
+    <color name="bg_scan_pay">#fcb349</color>
+
+    <color name="colorGreen">#49bf1f</color>
+
+    <color name="start_color">#2967BE</color>
+    <color name="center_color">#7961A5</color>
+    <color name="end_color">#CE5A93</color>
+
+    <color name="color_drawer_section">#4C5352</color>
+    <color name="color_even_drawer_section">#F9F9F9</color>
+
+
+    <color name="bg_edittext">#F4F2F2</color>
+</resources>

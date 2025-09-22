@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_reli"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_religion"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_caste"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input1"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.Shrine.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_sub_caste"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Sub Caste"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_manglik"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/register_dropdown_parent_layout"
+        android:visibility="visible">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_star"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/register_dropdown_parent_layout"
+        android:visibility="visible">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_horo"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input2"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.Shrine.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_gothra"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Gothra"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        style="@style/register_dropdown_parent_layout"
+        android:visibility="visible">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_moon"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_reli"
+        style="@style/Widget.MyApp.ThemeButton"
+        android:layout_marginTop="10dp"
+        android:text="Update" />
+
+</LinearLayout>

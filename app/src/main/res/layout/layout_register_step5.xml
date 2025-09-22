@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_five"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Add your Religious Information / Other Information to make better Profile." />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/register_divider_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input1"
+            style="@style/Widget.Shrine.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_sub_caste"
+                style="@style/Widget.MyApp.AppTextField"
+                android:hint="Sub Caste"
+                android:inputType="text"
+                android:maxLength="80" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_manglik"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/register_dropdown_parent_layout"
+            android:visibility="visible">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_star"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/register_dropdown_parent_layout"
+            android:visibility="visible">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_horo"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_old"
+            style="@style/Widget.Shrine.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_gothra"
+                style="@style/Widget.MyApp.AppTextField"
+                android:hint="Gothra"
+                android:inputType="text"
+                android:maxLength="80" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            style="@style/register_dropdown_parent_layout"
+            android:visibility="visible">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_moon"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_with_shadow">
+
+            <EditText
+                android:id="@+id/et_hoby"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="Hobby*"
+                android:inputType="textMultiLine"
+                android:paddingLeft="12dp"
+                android:paddingTop="10dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_with_shadow">
+
+            <EditText
+                android:id="@+id/et_about"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="Write about Yourself*"
+                android:inputType="textMultiLine"
+                android:paddingLeft="12dp"
+                android:paddingTop="10dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_five_submit"
+            style="@style/Widget.MyApp.ThemeButton"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:text="Continue" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_five_prev"
+            style="@style/Widget.MyApp.WhiteButton"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:focusable="false"
+            android:text="Previous" />
+
+    </LinearLayout>
+
+</LinearLayout>

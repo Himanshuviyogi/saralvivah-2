@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_third"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Add Your Education Information to make Stronger Your Profile." />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/register_divider_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                android:id="@+id/spin_edu"
+                style="@style/register_dropdown" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_emp_in"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_income"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_occupation"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+            <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/spin_designation"
+                style="@style/register_dropdown" />
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_third_submit"
+            style="@style/Widget.MyApp.ThemeButton"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:text="Continue" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_third_prev"
+            style="@style/Widget.MyApp.WhiteButton"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:focusable="false"
+            android:text="Previous" />
+
+    </LinearLayout>
+
+</LinearLayout>

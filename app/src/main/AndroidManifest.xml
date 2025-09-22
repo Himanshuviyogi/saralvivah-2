@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.advance.sanatani_vivah">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- App hardware permission -->
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="com.advance.sanatani_vivah.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.RegisterPhotoUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.BlockListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ViewedContactActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.RecentlyLoginActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.RecentlyJoinActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.NotificationListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.AddReviewActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ReviewListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.SendInquiryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.VendorDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.VendorListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.FirstVendorCategoryListActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.MatchFromAdminActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ChatConversationActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ChatActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.AddSuccessStoryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.SuccessStoryActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.SplashScreenActivity"
+            android:screenOrientation="locked"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.IntroActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.LoginActivity"
+            android:parentActivityName="com.advance.sanatani_vivah.activities.IntroActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advance.sanatani_vivah.activities.IntroActivity" />
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.RegisterFirstActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.DashboardActivity"
+            android:label="@string/title_activity_deshboard"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.DashboardTheme">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+<!--                <data-->
+<!--                    android:host="megamatrimony.trialme.in"-->
+<!--                    android:scheme="http" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ForgotPasswordActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ViewMyProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.EditProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ManagePhotosActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ChangePasswordActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.SearchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.DeleteProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ContactUsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.AllCmsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ReportMissuseActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.LikeProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ShortlistedProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.MessagesActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ConversationActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.advance.sanatani_vivah.activities.QuickMessageActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advance.sanatani_vivah.activities.QuickMessageActivity" />
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ChatConversationActivityNew"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advance.sanatani_vivah.activities.ChatConversationActivityNew"/>
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ManageAccountActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.SavedSearchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ExpressInterestActivity"
+            android:parentActivityName="com.advance.sanatani_vivah.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advance.sanatani_vivah.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.ViewedProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.CurrentPlanActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.PlanListActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.SearchResultActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.OtherUserProfileActivity"
+            android:parentActivityName="com.advance.sanatani_vivah.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advance.sanatani_vivah.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.MakePaymentsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.SuccessActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.PhotoPasswordActivity"
+            android:parentActivityName="com.advance.sanatani_vivah.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advance.sanatani_vivah.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.UploadVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.UploadIdAndHoroscopeActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.CustomMatchActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.LoginWithOtpActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.LoginWithOtpActivityWithFirebase"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.EditPreferenceActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.GallaryNewActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.PaymentWebView"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.QuickMessageActivity"
+            android:parentActivityName="com.advance.sanatani_vivah.activities.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advance.sanatani_vivah.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.advance.sanatani_vivah.activities.VideoCallActivity"
+            android:exported="false" />
+
+
+
+        <!-- File provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- End File provider -->
+        <!-- fcm -->
+        <service
+            android:name="com.advance.sanatani_vivah.fcm.MyFirebaseMessagingService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="General" />
+
+        <receiver
+            android:name="com.advance.sanatani_vivah.broadcastreciever.MySMSBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

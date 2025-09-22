@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp"
+    tools:context="com.advance.sanatani_vivah.fragments.QuickSearchFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_height_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Height"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clipChildren="false">
+
+                            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                                android:id="@+id/search_range_height"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:bar_color="#b7b7b7"
+                                app:bar_highlight_color="@color/red"
+                                app:data_type="_integer"
+                                app:left_thumb_color="@color/red"
+                                app:left_thumb_color_pressed="@color/red"
+                                app:max_value="85"
+                                app:min_value="48"
+                                app:right_thumb_color="@color/red"
+                                app:right_thumb_color_pressed="@color/red" />
+
+                            <TextView
+                                android:id="@+id/search_tv_min_height"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/search_range_height"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/search_tv_max_height"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/search_range_height"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_weight_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:padding="5dp"
+                            android:text="Age"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clipChildren="false">
+
+                            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                                android:id="@+id/search_range_age"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:bar_color="#b7b7b7"
+                                app:bar_highlight_color="@color/red"
+                                app:data_type="_integer"
+                                app:left_thumb_color="@color/red"
+                                app:left_thumb_color_pressed="@color/red"
+                                app:max_value="65"
+                                app:min_value="18"
+                                app:right_thumb_color="@color/red"
+                                app:right_thumb_color_pressed="@color/red" />
+
+                            <TextView
+                                android:id="@+id/search_tv_min_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/search_range_age"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="18 Years"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/search_tv_max_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/search_range_age"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="65 Years"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_mari"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_religion"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_caste"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_tongue"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_country"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_state"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_city"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                        android:id="@+id/spin_edu"
+                        style="@style/register_dropdown" />
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/chk_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:text="With Photo"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    style="@style/Widget.MyApp.ThemeButton"
+                    android:text="Search"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White" />
+
+                <Button
+                    android:id="@+id/btn_save_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/roboto_medium"
+                    style="@style/Widget.MyApp.WhiteButton"
+                    android:text="Save Search"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_search" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/layout_loader"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

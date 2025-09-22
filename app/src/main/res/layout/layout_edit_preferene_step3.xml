@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_edu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_edu"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_emp_in"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_occupation"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/spin_designation"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_income"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_edu"
+        style="@style/Widget.MyApp.ThemeButton"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_update" />
+
+</LinearLayout>

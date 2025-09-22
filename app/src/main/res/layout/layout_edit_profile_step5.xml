@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_loca"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_country"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_state"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_city"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_multiline_edittext_layout">
+
+        <EditText
+            android:id="@+id/et_address"
+            style="@style/register_multiline_edittext_style"
+            android:hint="Address" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/layoutCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/custom_end_icon"
+            android:layout_alignBottom="@+id/custom_end_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_square_edittext">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/spin_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:tag="countryCodePicker"
+                app:ccp_arrowColor="@color/black"
+                app:ccp_defaultNameCode="IN"
+                app:ccp_showArrow="true"
+                app:ccp_showFlag="true"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="true"
+                app:ccp_textSize="15sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/custom_end_icon"
+            style="@style/Widget.Shrine.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/layoutCountryCode"
+            android:hint="Mobile No.*"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mobile"
+                style="@style/Widget.MyApp.AppTextField"
+                android:inputType="number"
+                android:maxLength="10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input1"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.Shrine.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:maxLength="13" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input2"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.Shrine.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_time_call"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Time to call" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_residence"
+            style="@style/register_dropdown" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_loca"
+        style="@style/Widget.MyApp.ThemeButton"
+        android:layout_marginTop="10dp"
+        android:text="Update" />
+
+</LinearLayout>

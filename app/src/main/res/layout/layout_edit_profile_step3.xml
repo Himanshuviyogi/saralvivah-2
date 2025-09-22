@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_about"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout style="@style/register_multiline_edittext_layout">
+
+        <EditText
+            android:id="@+id/et_about"
+            style="@style/register_multiline_edittext_style"
+            android:hint="Write something about Yourself" />
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input1"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.Shrine.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_hoby"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Hobby"
+            android:inputType="text"
+            android:maxLength="80" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input2"
+        style="@style/Widget.Shrine.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_birth_place"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint="Birth Place"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input3"
+        style="@style/Widget.Shrine.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_birth_time"
+            style="@style/Widget.MyApp.AppTextField"
+            android:hint=" Birth Time"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_created"
+            style="@style/register_dropdown"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/register_dropdown_parent_layout">
+
+        <com.androidbuts.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/spin_reference"
+            style="@style/register_dropdown"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_about"
+        style="@style/Widget.MyApp.ThemeButton"
+        android:layout_marginTop="10dp"
+        android:text="Update" />
+
+</LinearLayout>
